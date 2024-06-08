@@ -21,7 +21,7 @@ setup(
     description='Summarize YouTube video instantly with the power of distill-whisper and Mixtral-8B',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/yourusername/your_package',
+    url='https://github.com/Siris2314/ytsum',
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
