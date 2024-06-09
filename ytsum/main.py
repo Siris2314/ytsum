@@ -1,7 +1,5 @@
-import os
 import torch
-import requests
-from distill import load_speech_recognition_model, download_audio_from_youtube
+from .distill import load_speech_recognition_model, download_audio_from_youtube
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA, LLMChain
 from langchain_community.embeddings import HuggingFaceBgeEmbeddings
@@ -11,6 +9,7 @@ from langchain_community.vectorstores import FAISS
 from langchain.schema.runnable import RunnablePassthrough
 from langchain_together import ChatTogether
 import textwrap
+import os
 
 together_api_key = None
 
@@ -24,6 +23,10 @@ def load_transcript(url):
     transcription = whisper(audio_file, chunk_length_s=30, stride_length_s=5, batch_size=8)
     with open("new_transcript.txt", "w") as f:
         f.write(transcription["text"])
+
+    if os.path.exists(audio_file):
+        os.remove(audio_file)
+        print(f"File '{audio_file}' deleted successfully.")
     return "new_transcript.txt"
 
 def wrap_text_preserve_newlines(text, width=110):
