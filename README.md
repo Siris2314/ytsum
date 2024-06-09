@@ -1,5 +1,8 @@
 # ytsum
 
+![PyPI](https://img.shields.io/pypi/v/ytsum?label=pypi%20package)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/ytsum)
+
 ## Summarize YouTube videos instantly with the power of distil-whisper and Mixtral-8x7B
 
 ytsum is a Python package that allows you to summarize YouTube videos by leveraging the power of distil-whisper for transcription and Mixtral-8x7B for generating detailed answers based on the video content.
