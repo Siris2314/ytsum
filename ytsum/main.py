@@ -27,7 +27,7 @@ def load_transcript(url):
     if os.path.exists(audio_file):
         os.remove(audio_file)
         print(f"File '{audio_file}' deleted successfully.")
-    return "new_transcript.txt"
+    return f"{name}.txt"
 
 def wrap_text_preserve_newlines(text, width=110):
     lines = text.split('\n')
