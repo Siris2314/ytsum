@@ -19,9 +19,10 @@ def download_audio_from_youtube(url: str, video_name = "yes") -> str:
 
     video_url = YouTube(url)
     video = video_url.streams.filter(only_audio=True).first()
-    filename = f"{video_name}.mp3"
+    name = video_url.title
+    filename = f"{name}.mp3"
     video.download(filename=filename)
-    return filename
+    return filename, name
 
 
 def load_speech_recognition_model(model_id="distil-whisper/distil-large-v3") -> pipeline:

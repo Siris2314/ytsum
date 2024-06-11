@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='ytsum',
-    version='0.1.5',
+    version='0.1.6',
     packages=find_packages(),
     install_requires=[
         'torch==2.1.1+cu118',

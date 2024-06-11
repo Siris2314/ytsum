@@ -19,9 +19,9 @@ def set_together_api_key(api_key):
 
 def load_transcript(url):
     whisper = load_speech_recognition_model()
-    audio_file = download_audio_from_youtube(url)
+    audio_file, name = download_audio_from_youtube(url)
     transcription = whisper(audio_file, chunk_length_s=30, stride_length_s=5, batch_size=8)
-    with open("new_transcript.txt", "w") as f:
+    with open(f"{name}.txt", "w") as f:
         f.write(transcription["text"])
 
     if os.path.exists(audio_file):
