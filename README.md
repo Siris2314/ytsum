@@ -32,8 +32,6 @@ result = answer_youtube_question(youtube_url, query)
 
 print(result)
 ```
-## Models used
+## Documentation
 
-Distil-large-v3: https://huggingface.co/distil-whisper/distil-large-v3
-
-Mixtral-8x7B-SFT: https://huggingface.co/NousResearch/Nous-Hermes-2-Mixtral-8x7B-SFT
+https://ytsum-docs.netlify.app/
