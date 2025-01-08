@@ -1,6 +1,6 @@
 import torch
 from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, pipeline
-from pytube import YouTube
+from pytubefix import YouTube
 
 
 def download_audio_from_youtube(url: str, video_name = "yes") -> str:

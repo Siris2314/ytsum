@@ -69,7 +69,7 @@ def answer_youtube_question(youtube_url, query):
     db = FAISS.from_documents(texts, embeddings)
 
     # Load LLM model
-    llm = ChatTogether(model="NousResearch/Nous-Hermes-2-Mixtral-8x7B-SFT", max_tokens=2048, together_api_key=together_api_key)
+    llm = ChatTogether(model="NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO", max_tokens=2048, together_api_key=together_api_key)
 
     # Create prompt
     instruction = "Given the context that has been provided. \n {context}, Answer the following question: \n{question}"

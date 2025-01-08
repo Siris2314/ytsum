@@ -1,0 +1,6 @@
+mlruns
+wandb
+ytsum_llama3.2
+ytsum_llama3.2-checkpoint-local
+fine_tune.ipynb
+.env
